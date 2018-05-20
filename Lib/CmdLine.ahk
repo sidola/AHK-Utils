@@ -1,7 +1,7 @@
 /**
 
 Class:
-    CmdLien.ahk - Utility class for running cmdline utils.
+    CmdLine.ahk - Utility class for running cmdline utils.
 
 Version: 
     v1.0.0
