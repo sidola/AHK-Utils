@@ -25,3 +25,27 @@ if (inputResult) {
 Result
 
 ![GuiPrompt](Screenshots/GuiPrompt.png)
+
+## [CmdLine.ahk](Lib/CmdLine.ahk)
+
+Basic util class for working with big and dynamic command line calls.
+
+```ahk
+inputFile := "../myfile.mp4"
+outputFile := "../cut_myfile.mp4"
+fromTime := "00:10"
+toTime := "00:31"
+
+cmd := new CmdLine("ffmpeg.exe")
+
+cmd.AddParam("-ss", fromTime)
+cmd.AddParam("-i", inputFile)
+
+cmd.AddParam("-c", "copy")
+cmd.AddFlag("-copyts")
+
+cmd.AddParam("-to", toTime)
+
+cmd.AddFlag(outputFile)
+cmd.Execute()
+```
